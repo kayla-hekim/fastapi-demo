@@ -23,3 +23,7 @@ def multiply(c: int, d: int):
 @app.get("/square/{a}")
 def square(a: int):
     return {"square": a * a}
+
+@app.get("/boogieoogie")
+def boogieoogie():
+    return {"message": "Boogieoogie"}
