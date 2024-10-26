@@ -27,3 +27,10 @@ def square(a: int):
 @app.get("/boogieoogie")
 def boogieoogie():
     return {"message": "Boogieoogie"}
+
+@app.get("/yesorno/{a}")
+def yesorno(a: str):
+    if a == "yes":
+        return {"message": "yes"}
+    else:
+        return {"message": "no"}
