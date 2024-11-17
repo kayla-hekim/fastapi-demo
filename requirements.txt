@@ -6,3 +6,4 @@ pydantic
 # dnspython
 # mysqlclient
 mysql-connector-python
+pandas
