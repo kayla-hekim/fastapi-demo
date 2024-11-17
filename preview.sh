@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd app
-uvicorn main:app --reload --log-level debug
+uvicorn main:api --reload --log-level debug
