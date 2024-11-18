@@ -9,10 +9,10 @@ import os
 import mysql.connector
 from mysql.connector import Error
 
-DBHOST = 'ds2022.cqee4iwdcaph.us-east-1.rds.amazonaws.com'
-DBUSER = 'ds2022'
-DBPASS = os.getenv('DB_PASS')
-DB = "rkf9wd"
+DBHOST = os.getenv('DB_HOST', 'ds2022.cqee4iwdcaph.us-east-1.rds.amazonaws.com')
+DBUSER = os.getenv('DB_USER', 'admin')
+DBPASS = os.getenv('DB_PASS')  # Set this in your environment
+DB = os.getenv('DB', 'rkf9wd')
 
 db = mysql.connector.connect(user=DBUSER, host=DBHOST, password=DBPASS, database=DB)
 cur=db.cursor()
