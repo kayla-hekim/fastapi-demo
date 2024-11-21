@@ -23,7 +23,7 @@ api.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get('/genres')
+@api.get('/genres')
 def get_genres():
     db = mysql.connector.connect(user=DBUSER, host=DBHOST, password=DBPASS, database=DB)
     cur=db.cursor()
