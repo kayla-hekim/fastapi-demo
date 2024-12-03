@@ -48,8 +48,8 @@ def get_songs():
         songs.album AS album,
         songs.artist AS artist,
         songs.year AS year,
-        CONCAT('https://rkf9wd-dp1-spotify.s3.amazonaws.com/', songs.file) AS file,
-        CONCAT('https://rkf9wd-dp1-spotify.s3.amazonaws.com/', songs.image) AS image,
+        songs.file AS file,
+        songs.image AS image,
         genres.genre AS genre
     FROM 
         songs
